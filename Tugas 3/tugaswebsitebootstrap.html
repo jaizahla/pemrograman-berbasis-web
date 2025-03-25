@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas website bootstrap</title>
+
+<!-- link google font css-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <!-- link bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+/* Perbesar logo */
+.navbar-brand img {
+    width: 70px; 
+    height: auto; /* Biar proporsional */
+    margin-right: 15px; /* Jarak antara logo dan teks */
+}
+/*ubah font nama brand di navbar*/
+.navbar-brand, nav-link {
+    display: flex;
+    align-items: center; /* Biar sejajar vertikal dengan logo */
+    font-family: 'Dancing Script',cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Ubah ukuran dan ketebalan font navbar */
+.nav-link {
+    font-family:sans-serif;
+    font-size: 1.4rem; /* Perbesar font */
+    font-weight: bold; /* Bikin tebal */
+}
+
+.nav-link.active {
+    color: rgb(237, 50, 128) !important; /* Home jadi warna pink. Bootstrap punya styling default,perlu !important biar CSS  nggak ditimpa oleh Bootstrap*/
+}
+
+.nav-link#AboutUs,.nav-link#ShowContact {
+    color: #dc9fe8 !important; /* Contact Us jadi abu tua (#555 = abu tua) */
+}
+    </style>
+
+</head>
+<body>
+    <!-- navbar -->
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="AboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" id="ShowContact">Contact Us</a> <!-- "ShowContact" id yg dipake di javascript buat munculin form -->
+        </li> 
+      </ul>
+
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logpbrandjbeauty.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      JaiBeauty
+    </a>
+        </div>
+      </nav>
+
+      <!-- card -->
+
+       <!-- container untuk card produk -->
+        <!-- mt-4 margin atas biar ada jarak dari navbar -->
+        <div class ="container mt-4">  <!-- container : pembungkus semua produk biar lebih rapi di tgh layar -->
+
+            <!-- row utk mengatur produk dalam 1 baris -->
+             <div class="row"> <!-- row pertama utk 3 produk -->
+
+             <!-- produk 1 -->
+              <div class="col-md-4"> <!-- col-md-4 brrt kolom ini akan mengambil 4 bagian dari 12 (4+4+4=12) kolom grid bootstrap jdinya dalam satu baris berisi 3 produk -->
+      <div class="card" style="width: 18rem;">
+        <img src="mascara.jpg" class="card-img-top" alt="mascara">
+        <div class="card-body">
+          <h5 class="card-title">JaiLash Waterproof Mascara – Max Volume & Length, Easy Removal</h5>
+          <p class="card-text">Formula inovatifnya menjaga tampilan bulu mata tetap on point sepanjang hari.
+            Waterproof & smudge-proof untuk tampilan tahan lama,
+            Memberi efek panjang & bervolume tanpa menggumpal,
+            Mudah dibersihkan dengan remover tanpa gesekan berlebihan</p>
+          <a href="#" class="btn btn-primary">see more</a>
+        </div>  <!-- penutup card body -->
+      </div>  <!-- penutup card -->
+    </div> <!-- penutup col-md-4 -->
+
+    <!-- produk 2 -->
+    <div class="col-md-4"> <!-- ckolom ke 2/3 -->
+        <div class="card" style="width: 18rem;">
+          <img src="blush.jpg" class="card-img-top" alt="blush">
+          <div class="card-body">
+            <h5 class="card-title">JaiSoft blush – fresh and flawless in every shade </h5>
+            <p class="card-text">Rona pipi natural atau tampilan bold? Soft Blush hadir dengan beragam warna cantik yang cocok untuk semua skin tone! Teksturnya lembut, ringan, dan mudah dibaurkan, memberikan hasil seamless dan tahan lama tanpa patchy. Dengan packaging yang compact membuat blush ini mudah dibawa saat bepergian.</p>
+            <a href="#" class="btn btn-primary">see more</a>
+          </div>  <!-- penutup card body -->
+        </div>  <!-- penutup card -->
+      </div> <!-- penutup col-md-4 -->
+
+      <!-- produk 3 -->
+      <div class="col-md-4"> <!-- kolom ke 3/3 -->
+        <div class="card" style="width: 18rem;">
+          <img src="eyeshadow.jpg" class="card-img-top" alt="eyeshadow">
+          <div class="card-body">
+            <h5 class="card-title">JaiGlam Eyeshadow Palette  – Bold, Soft, & Everything in Between</h5>
+            <p class="card-text">Bebaskan kreativitasmu dengan Glam Eyeshadow Palette! Hadir dalam berbagai warna pigmented dengan tekstur lembut, mudah dibaurkan, dan tahan lama. Dari tampilan natural hingga glam, semuanya bisa dengan satu palet!</p>
+            <a href="#" class="btn btn-primary">see more</a>
+          </div>  <!-- penutup card body -->
+        </div>  <!-- penutup card -->
+      </div> <!-- penutup col-md-4 -->
+      </div> <!-- penutup row pertama -->
+      
+
+      <div class ="row mt-4"> <!-- row ke 2 utk 3 produk dlm 1 baris setelah nya -->
+        <!-- dikasih mt-4 biar ada jarak antara baris pertama dan kedua biar ga nempel -->
+
+        <!-- produk 4 -->
+        <div class="col-md-4"> <!-- kolom ke 3/3 -->
+            <div class="card" style="width: 18rem;">
+              <img src="foundation.jpg" class="card-img-top" alt="foundation">
+              <div class="card-body">
+                <h5 class="card-title">JaiGlow skinlike Foundation – Seamless Coverage, Weightless Feel</h5>
+                <p class="card-text">kulit tampak flawless, smooth, dan natural dengan JaiGlow SkinFit Foundation! Formula ringan yang menyatu sempurna dengan kulit tanpa terasa berat atau cakey. Diperkaya dengan hydrating & skin-loving ingredients, membuat kulit tetap lembap dan nyaman sepanjang hari. Tersedia dengan berbagai pilihan shade.</p>
+                <a href="#" class="btn btn-primary">see more</a>
+              </div>  <!-- penutup card body -->
+            </div>  <!-- penutup card -->
+          </div> <!-- penutup col-md-4 -->
+
+          <!-- produk 5 -->
+          <div class="col-md-4"> <!-- kolom ke 3/3 -->
+            <div class="card" style="width: 18rem;">
+              <img src="cushion.jpg" class="card-img-top" alt="cushion">
+              <div class="card-body">
+                <h5 class="card-title">JaiGlow Perfect Cushion – Flawless Skin, Effortless Glow</h5>
+                <p class="card-text">Dapatkan kulit halus, glowing, dan flawless seketika dengan JaiGlow Perfect Cushion! Formula ringan dengan coverage buildable, memberikan hasil natural hingga full coverage tanpa terasa berat. Diperkaya dengan skincare ingredients untuk menjaga kelembapan kulit sepanjang hari. Tersedia dalam berbagai pilihan shade untuk semua skintone.</p>
+                <a href="#" class="btn btn-primary">see more</a>
+              </div>  <!-- penutup card body -->
+            </div>  <!-- penutup card -->
+          </div> <!-- penutup col-md-4 -->
+
+          <!-- produk 6 -->
+          <div class="col-md-4"> <!-- kolom ke 3/3 -->
+            <div class="card" style="width: 18rem;">
+              <img src="lippies.jpg" class="card-img-top" alt="lippies">
+              <div class="card-body">
+                <h5 class="card-title">JaiLips All Day Lippies – Bold, Soft, & Everything in Between </h5>
+                <p class="card-text">Tampil percaya diri dengan JaiLips All Day Lippies! Formula ringan dan nyaman di bibir, memberikan warna intens, tahan lama, dan melembapkan tanpa membuat bibir terasa kering. Dengan kandungan hyaluronic acid dan aroma buah buahan bikin bibir terasa plumpy. Dari matte, elegan hingga glossy fresh, temukan shade favoritmu untuk setiap kesempatan</p>
+                <a href="#" class="btn btn-primary">see more</a>
+              </div>  <!-- penutup card body -->
+            </div>  <!-- penutup card -->
+          </div> <!-- penutup col-md-4 -->
+        </div> <!-- penutup row kedua -->
+    </div> <!-- penutup container-->
+
+<!-- form contact us -->
+
+
+    <div class="container mt-5 d-none" id="contactform">
+ 
+        <!-- judul dan deskripsi form-->
+         <h2 class="text-primary">Contact Us</h2> <!--text primary itu biru yg lain ada text-success: Hijau, text-danger:Merah dll-->
+         <p>if you need help, please contact us via the form below</p>
+
+         <form>
+    <!-- email-->
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+          <!--input first name & last name -->
+          <div class="row">
+            <div class="col"> <!-- menggunakan booststrap row & col agar first nama dan last name sejajar -->
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+          </div>
+
+          <!-- form input message -->
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> <!-- row=3 brrt tinggi text area 3 baris -->
+          </div> <!-- <textarea class="form-control" utk input yg lbh pjg utk memasukkan pesan-->
+
+          <!-- form checkbox -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">i agree to the terms and condition</label>
+          </div>
+
+           <!--tombol utk mengiirim form -->
+          <button type="submit" class="btn btn-primary">Submit</button> <!--btn btn-primary menggunakan gaya booststrap wrn biru -->
+
+</form>
+</div>
+    <!--link booststrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--javascript untuk toggle contact form-->
+    <script>
+        //javascript nyari elemen contact us di navbar pk getelemenby id("ShowContact")//
+        document.getElementById("ShowContact").addEventListener("click", function(event) {
+            event.preventDefault(); //Ini mencegah link berpindah ke halaman lain. Jadi, meskipun tombolnya berbentuk link, dia tetap di halaman yang sama./
+            var contactForm = document.getElementById("contactform"); // Ini mencari bagian form yang punya id="contactform".contactform disimpan di var karena dipakai lebih dari sekali. yaitu utk ngapus class d-none dan utk scrollintoview.//
+
+            contactForm.classList.remove("d-none"); // d-none itu class yang menyembunyikan form. Jadi, kode ini akan menampilkan form yang tadinya tersembunyi.//
+            contactForm.scrollIntoView({ behavior: "smooth" }); // Scroll halaman ke form dengan animasi, Ini membuat tampilan halaman otomatis scroll ke bagian form dengan efek yang halus.//
+    });
+    </script>
+</body>
+</html>
